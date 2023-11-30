@@ -16,6 +16,7 @@ namespace 计时器
             form.btnReset.Visible = false;
             base.Init(form);
             this.Start();
+            this.Update();
         }
 
         public override void Update() 

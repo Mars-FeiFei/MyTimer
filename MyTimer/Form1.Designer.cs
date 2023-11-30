@@ -40,7 +40,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(36, 163);
+            this.btnStart.Location = new System.Drawing.Point(12, 163);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(77, 42);
             this.btnStart.TabIndex = 0;
@@ -51,7 +51,7 @@
             // btnStop
             // 
             this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(155, 163);
+            this.btnStop.Location = new System.Drawing.Point(114, 163);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(77, 42);
             this.btnStop.TabIndex = 1;
@@ -62,7 +62,7 @@
             // lbTime
             // 
             this.lbTime.AutoSize = true;
-            this.lbTime.Location = new System.Drawing.Point(98, 116);
+            this.lbTime.Location = new System.Drawing.Point(122, 106);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(80, 18);
             this.lbTime.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.rdoStopwatch.AutoSize = true;
             this.rdoStopwatch.Checked = true;
-            this.rdoStopwatch.Location = new System.Drawing.Point(-1, 27);
+            this.rdoStopwatch.Location = new System.Drawing.Point(12, 27);
             this.rdoStopwatch.Name = "rdoStopwatch";
             this.rdoStopwatch.Size = new System.Drawing.Size(114, 22);
             this.rdoStopwatch.TabIndex = 4;
@@ -84,7 +84,7 @@
             // rdoTimer
             // 
             this.rdoTimer.AutoSize = true;
-            this.rdoTimer.Location = new System.Drawing.Point(119, 27);
+            this.rdoTimer.Location = new System.Drawing.Point(135, 27);
             this.rdoTimer.Name = "rdoTimer";
             this.rdoTimer.Size = new System.Drawing.Size(78, 22);
             this.rdoTimer.TabIndex = 5;
@@ -95,7 +95,7 @@
             // rdoTime
             // 
             this.rdoTime.AutoSize = true;
-            this.rdoTime.Location = new System.Drawing.Point(203, 27);
+            this.rdoTime.Location = new System.Drawing.Point(219, 27);
             this.rdoTime.Name = "rdoTime";
             this.rdoTime.Size = new System.Drawing.Size(69, 22);
             this.rdoTime.TabIndex = 6;
@@ -116,7 +116,7 @@
             "30min",
             "60min",
             "90min"});
-            this.comboBox1.Location = new System.Drawing.Point(78, 67);
+            this.comboBox1.Location = new System.Drawing.Point(96, 55);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 26);
             this.comboBox1.TabIndex = 7;
@@ -125,7 +125,7 @@
             // btnReset
             // 
             this.btnReset.Enabled = false;
-            this.btnReset.Location = new System.Drawing.Point(101, 233);
+            this.btnReset.Location = new System.Drawing.Point(219, 163);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(77, 42);
             this.btnReset.TabIndex = 8;
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(289, 307);
+            this.ClientSize = new System.Drawing.Size(318, 302);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.rdoTime);
@@ -146,6 +146,7 @@
             this.Controls.Add(this.lbTime);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";

@@ -11,6 +11,15 @@ namespace 计时器
             form.btnReset.Visible = true;
             form.comboBox1.Enabled = true;
             base.Init(form);
+            Update();
+            form.comboBox1.SelectedIndexChanged -= ComboBox1_SelectedIndexChanged;
+            form.comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+        }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitSeconds();
+            Update();
         }
 
         public override void Start()
@@ -19,21 +28,19 @@ namespace 计时器
             this.form.btnStop.Enabled = true;
             this.form.btnStart.Enabled = false;
             this.form.btnReset.Enabled = true;
-
-            if (seconds == 0)
-            {
-                InitSeconds();
-            }
-
+            this. InitSeconds();
+            this.Update();
             base.Start();
-            Update();
         }
 
         private void InitSeconds()
         {
+            if (this.form.comboBox1.SelectedIndex < 0)
+            {
+                this.form.comboBox1.SelectedIndex = 0;
+            }
             var selected = this.form.comboBox1.SelectedItem.ToString();
             seconds = Convert.ToInt32(selected.Split('m')[0]) * 60;
-           
         }
 
         public override void Stop()
@@ -58,14 +65,7 @@ namespace 计时器
             string secondsStr = (leftMinutes % 60).ToString().PadLeft(2, '0');
 
             this.display = $"{hours}:{minutes}:{secondsStr}";
-            if (form.lbTime.Text == "00:00:00" && form.btnStart.Visible == true && form.btnStop.Visible == false)
-            {
-                form.comboBox1.Enabled = true;
-            }
-            else
-            {
-                form.comboBox1.Enabled = false;
-            }
+            
             
             
             seconds--;
